@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+body{
+    margin: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 2%, rgba(102,102,102,1) 10%, rgba(237,237,237,1) 35%, rgba(215,215,215,1) 64%, rgba(102,102,102,1) 89%, rgba(0,0,0,1) 98%);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    color: rgb(27, 27, 27);
+}
+
+header {
+    text-align: center;
+    margin-top: 2%;
+}
+
+header h1{
+    font-size: 3em;
+    text-shadow: 2px 1px black ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective:1200px; /**/
+}
+
+.carrossel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /*ira dar efeito 3D de acordo com a perpectiva que escolhermos na animação*/
+    animation: rotate360 60s infinite forwards; /*forwards(pra frente): usado para direcao ou sentido que a animacao vai ocorrer (nesse caso sera para frente)*/
+}
+
+.imagem{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    right: 10px;
+    width: 290px;
+    height: 187px;
+    background-size: cover;
+    display: flex;
+}
+
+.imagem span{
+    font-size: 1.2em;
+    margin: auto;
+    text-align: center;
+}
+
+@keyframes rotate360 {
+    from{
+        transform: rotateY(0deg); /* ira rodar em volta do eixo "Y" como se tivesse um poste no centro usamo como referencia*/
+    }
+
+    to{
+        transform: rotateY(360deg);
+    }
+}
+
+/*Para selecionar um filho especifico da class ou tag*/
+.imagem:nth-child(1){ 
+    background-image: url(https://www.shutterstock.com/image-vector/lima-peru-december-29-2022-600nw-2243375233.jpg);
+    transform: rotateY(0deg) translateZ(430px); /*nesse caso colocamos transalateZ para dar profundidade*/
+    color: green;
+    cursor: pointer;
+}
+.imagem:nth-child(2){ 
+    background-image: url(https://www.100hdwallpapers.com/wallpapers/2880x1620/lionel_messi-hd_wallpapers.jpg);
+    transform: rotateY(40deg) translateZ(430px); /*nesse caso colocamos transalateZ para dar profundidade*/
+    color: aliceblue;
+    cursor: pointer;
+}
+.imagem:nth-child(3){ 
+    background-image: url(https://wallpapers.com/images/hd/ronaldo-background-x3shwbyfwjl3zs8u.jpg);
+    transform: rotateY(80deg) translateZ(430px); /*nesse caso colocamos transalateZ para dar profundidade*/
+    color: aliceblue;
+    cursor: pointer;
+}
+.imagem:nth-child(4){ 
+    background-image: url(https://i.pinimg.com/originals/90/a1/d1/90a1d1a937f57d3787af01179c181d7e.jpg);
+    transform: rotateY(120deg) translateZ(430px); /*nesse caso colocamos transalateZ para dar profundidade*/
+    background-size: 100% 100%;
+    color: rgb(0, 55, 255);
+    cursor: pointer;
+}
+.imagem:nth-child(5){ 
+    background-image: url(https://i.pinimg.com/originals/a8/f4/66/a8f46678b0a8fc3bb58db451c6d1973a.jpg);
+    transform: rotateY(160deg) translateZ(430px); /*nesse caso colocamos transalateZ para dar profundidade*/
+    color: aliceblue;
+    cursor: pointer;
+}
+.imagem:nth-child(6){ 
+    background-image: url(https://64.media.tumblr.com/367be3760d81a8fd8b778f67d0185d77/tumblr_pmvp6eZOdm1wyow3s_1280.jpg);
+    transform: rotateY(200deg) translateZ(430px); /*nesse caso colocamos transalateZ para dar profundidade*/
+    background-size: 100% 100%;
+    color: aliceblue;
+    cursor: pointer;
+}
+.imagem:nth-child(7){ 
+    background-image: url(https://pbs.twimg.com/media/EYZhOFDWoAA0CIy.jpg);
+    transform: rotateY(240deg) translateZ(430px); /*nesse caso colocamos transalateZ para dar profundidade*/
+    background-size: 100% 100%;
+    color: rgb(0, 255, 229);
+    cursor: pointer;
+}
+.imagem:nth-child(8){ 
+    background-image: url(https://i.pinimg.com/736x/b1/51/07/b15107c5a1bf6cc9c4af4f15330ee851.jpg);
+    transform: rotateY(280deg) translateZ(430px); /*nesse caso colocamos transalateZ para dar profundidade*/
+    color: rgb(0, 55, 255);
+    cursor: pointer;
+}
+.imagem:nth-child(9){ 
+    background-image: url(https://i.ytimg.com/vi/se9kSah1dYw/mqdefault.jpg);
+    transform: rotateY(320deg) translateZ(430px); /*nesse caso colocamos transalateZ para dar profundidade*/
+    color: green;
+    cursor: pointer;
+}
+
+.imagem {
+    border-radius: 20px;
+}
+
+footer{
+   position: absolute;
+   width: 100vw;
+   bottom: 0;
+   padding: 0% 31%;
+   background-color: rgba(0, 0, 0, 0.471);
+}
+
+footer h2{
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: aliceblue;
+}
